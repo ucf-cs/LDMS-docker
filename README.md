@@ -12,13 +12,13 @@ docker build -t ldms -f dockerfile .
 docker run -it ldms
 ```
 
-You can start the sampler and aggregators processes using the following commands:
+You can start the sampler and aggregator processes using the following commands:
 ```bash
 bash ldms_configs/start-simple-sampler.sh
 bash ldms_configs/start-simple-agg.sh
 ```
 
-You can verify they are running with
+You can verify they are running with:
 ```bash
 ldms_ls -p 10001
 ldms_ls -p 10002
