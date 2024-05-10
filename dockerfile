@@ -9,7 +9,7 @@ RUN set -ex && yum makecache
 RUN set -ex && yum -y update
 RUN set -ex && yum -y install dnf-plugins-core
 RUN set -ex && yum config-manager --set-enabled powertools
-RUN set -ex && yum -y install wget bzip2 perl gcc gcc-c++ git gnupg make munge munge-devel python3-devel python3-pip python3 mariadb-server mariadb-devel psmisc bash-completion vim-enhanced http-parser-devel json-c-devel autoconf automake libevent libevent-devel autogen doxygen gettext openssl-devel readline-devel readline glib2-devel swig libcurl-devel munge-libs perl-ExtUtils-MakeMaker pam-devel rpm-build perl-DBI perl-Switch libtool bison-devel bison flex jansson-devel libuuid-devel swig rpcgen
+RUN set -ex && yum -y install wget bzip2 perl gcc gcc-c++ git gnupg make munge munge-devel python3-devel python3-pip python3 mariadb-server mariadb-devel psmisc bash-completion vim-enhanced http-parser-devel json-c-devel autoconf automake libevent libevent-devel autogen doxygen gettext openssl-devel readline-devel readline glib2-devel swig libcurl-devel munge-libs perl-ExtUtils-MakeMaker pam-devel rpm-build perl-DBI perl-Switch libtool bison-devel bison flex jansson-devel libuuid-devel swig rpcgen procps-ng
 RUN set -ex && yum clean all
 RUN set -ex && rm -rf /var/cache/yum
 
