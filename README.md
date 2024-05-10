@@ -18,5 +18,5 @@ To experiment with LDMS, put some applications into the repo before building (or
 Then you can run them in the container to see how CPU and RAM usage changes.
 
 `memeater.c` is in `/test_applications` as an example application. It can be built using
-`gcc memeater.c memeater` `and run using `./memeater`.
+`gcc memeater.c memeater` and run using `./memeater`.
 LDMS should sample and log any changes to CPU and RAM usage caused by this application.
