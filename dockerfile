@@ -103,7 +103,7 @@ RUN mkdir build
 WORKDIR /ovis/build
 RUN ../configure --prefix=/usr/local/ovis --enable-sos --with-sos=/usr/local/ovis --enable-swig 
 RUN make -j$(nproc)
-RUN make install -j$(nproc)
+RUN make install
 
 RUN set -x && echo "--- Installing NumSOS"
 
