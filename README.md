@@ -1,5 +1,7 @@
 # LDMS-docker
 
+NOTE: The scripts used by the container require Unix-style line endings. If you clone this repo using Windows, the default behavior of Git is to change the line endings to Windows-style. You can either [disable this behavior](https://docs.github.com/en/get-started/getting-started-with-git/configuring-git-to-handle-line-endings), clone and run these commands using [WSL](https://learn.microsoft.com/en-us/windows/wsl/setup/environment), or use a Unix-like machine (Linux or MacOS) to host the docker container.
+
 ## Build:
 
 ```bash
