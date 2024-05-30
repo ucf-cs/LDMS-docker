@@ -39,5 +39,11 @@ To experiment with LDMS, put some applications into the repo before building (or
 Then you can run them in the container to see how CPU and RAM usage changes.
 
 `memeater.c` is in `/test_applications` as an example application. It can be built using
-`gcc memeater.c memeater` and run using `./memeater`.
+`gcc memeater.c -o memeater` and run using `./memeater`.
 LDMS should sample and log any changes to CPU and RAM usage caused by this application.
+
+To change the sampling frequency, change `SAMPLE_INTERVAL` in the container, then restart the sampler and aggregator.
+```bash
+# Set the sample interval to 1000000 microseconds (1 second)
+export SAMPLE_INTERVAL=1000000
+```
