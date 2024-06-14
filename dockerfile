@@ -121,4 +121,5 @@ RUN make install -j$(nproc)
 WORKDIR /
 COPY . .
 
+RUN chmod +x /entrypoint.sh
 ENTRYPOINT /entrypoint.sh
