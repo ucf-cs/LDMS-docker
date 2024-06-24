@@ -14,7 +14,7 @@ docker build -t ldms -f dockerfile .
 docker run -it ldms
 ```
 
-All subsequent commands are run from within the Docker container shell.
+Subsequent commands are run from within the Docker container shell.
 
 You can start the sampler and aggregator processes using the following commands:
 ```bash
@@ -36,6 +36,11 @@ pkill -f ldmsd
 ```
 
 Results are stored in `/simple_agg/csv` in the container.
+From outside the container in your host's terminal, you can copy out the CSV data with the following command:
+
+```bash
+docker cp {CONTAINER_ID}:/simple_agg/csv/ "{host system output path}"
+```
 
 ## Notes
 
@@ -103,4 +108,8 @@ meminfo.1718393892  meminfo.HEADER.1718393892  procstat.1718393892  procstat.HEA
 [root@5f79b38ae87b csv]# cat procstat.1718393892 procstat.HEADER.1718393892 > procstat.csv
 [root@5f79b38ae87b csv]# exit
 ```
-Now copy the csv data to your physical machine and analyze the results with a tool such as Excel.
+Now copy the csv data to your physical machine and analyze the results with a tool such as Excel or matplotlib.
+```console
+~$ mkdir -p ./csv_output/
+~$ docker cp 5f79b38ae87b:/simple_agg/csv/*.csv ./csv_output/
+```
