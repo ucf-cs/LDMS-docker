@@ -104,8 +104,8 @@ Run an application to analyze.
 [root@5f79b38ae87b test_applications]# cd /simple_agg/csv
 [root@5f79b38ae87b csv]# ls
 meminfo.1718393892  meminfo.HEADER.1718393892  procstat.1718393892  procstat.HEADER.1718393892
-[root@5f79b38ae87b csv]# cat meminfo.1718393892 meminfo.HEADER.1718393892 > meminfo.csv
-[root@5f79b38ae87b csv]# cat procstat.1718393892 procstat.HEADER.1718393892 > procstat.csv
+[root@5f79b38ae87b csv]# cat meminfo.HEADER.1718393892 meminfo.1718393892 > meminfo.csv
+[root@5f79b38ae87b csv]# cat procstat.HEADER.1718393892 procstat.1718393892 > procstat.csv
 [root@5f79b38ae87b csv]# exit
 ```
 Now copy the csv data to your physical machine and analyze the results with a tool such as Excel or matplotlib.
