@@ -1,4 +1,4 @@
-FROM rockylinux:8
+FROM --platform=linux/amd64 rockylinux:8
 
 ARG SLURM_TAG=slurm-22-05-8-1
 ARG GOSU_VERSION=1.11
