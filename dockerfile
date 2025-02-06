@@ -95,7 +95,7 @@ RUN make install -j$(nproc)
 RUN set -x && echo "--- Installing LDMS"
 
 WORKDIR /
-RUN git clone --single-branch --branch OVIS-4 https://github.com/ovis-hpc/ovis
+RUN git clone --single-branch --branch OVIS-4.4.2 https://github.com/ovis-hpc/ovis
 WORKDIR /ovis
 RUN git checkout 70ea2017de535bdb42bce3174c442280183efd08
 RUN ./autogen.sh
